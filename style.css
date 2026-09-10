@@ -1,1 +1,653 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}body{background:#020d2b;color:#fff;overflow-x:hidden}.navbar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:15px 6%;background:#02113dcc;backdrop-filter:blur(12px)}.nav-links{display:flex;gap:24px;list-style:none}.nav-links a{text-decoration:none;color:#fff;font-weight:600}.nav-links a:hover{color:#FFD54F}.logo-placeholder,.cit-logo{width:70px;height:70px;border:2px dashed #FFD54F;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFD54F;font-size:11px}.hero-header{text-align:center;padding:70px 8%;background:linear-gradient(#031B45,#0A3D91)}.official{color:#FFD54F;font-weight:700}.hero-header h1{font-size:46px;margin:18px 0}.hero-header h2{font-size:28px;color:#D7E7FF}.hero-header h3{color:#FFD54F}.center-title h1{font-size:72px;color:#FFD54F}.center-title p{font-size:28px}.section{padding:70px 8%}.section h2{text-align:center;color:#FFD54F;margin-bottom:25px}.photo-box,.img-box,.description-box,.prayer-card{border:2px dashed #FFD54F;background:#ffffff08;border-radius:20px;padding:30px}.photo-box{height:360px;display:flex;align-items:center;justify-content:center}.content-grid{display:grid;grid-template-columns:1fr 2fr;gap:30px}.img-box{height:250px;display:flex;align-items:center;justify-content:center}.prayer-card p{text-align:center;margin:10px 0;line-height:1.8}.board-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}.member-card{padding:24px;background:#06337F;border-radius:18px;text-align:center;border:1px solid #4B88FF}.btn{display:inline-block;margin-top:30px;background:#FFD54F;color:#02103A;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:700}.footer{background:#02103A;padding:60px 8%;border-top:3px solid #FFD54F}.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.footer h3{color:#FFD54F;margin-bottom:15px}.footer p{line-height:1.8}.copy{text-align:center;margin-top:35px;border-top:1px solid rgba(255,255,255,.15);padding-top:20px}.floating-elements{position:fixed;inset:0;pointer-events:none;overflow:hidden}.note{position:absolute;color:#FFD54F22;font-size:28px;animation:float 16s linear infinite}.n1{left:5%;bottom:-10%}.n2{left:30%;bottom:-20%;animation-delay:3s}.n3{left:55%;bottom:-15%;animation-delay:5s}.n4{left:80%;bottom:-25%;animation-delay:7s}.n5{left:70%;bottom:-10%;animation-delay:9s}@keyframes float{from{transform:translateY(0) rotate(0)}to{transform:translateY(-140vh) rotate(360deg)}}@media(max-width:768px){.navbar{flex-direction:column;gap:15px}.nav-links{flex-wrap:wrap;justify-content:center}.content-grid,.footer-grid{grid-template-columns:1fr}.hero-header h1{font-size:34px}.center-title h1{font-size:48px}}
+/* =====================================================
+   RAGA — GANG 51  |  Rotaract Club of CIT
+   Stylesheet — Royal Blue & Gold theme
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --royal-blue: #002B7F;
+  --deep-royal-blue: #031B63;
+  --navy: #02103A;
+  --gold: #FFD54F;
+  --white: #FFFFFF;
+  --light-blue: #DDEBFF;
+
+  --gold-soft: rgba(255, 213, 79, 0.35);
+  --glass-fill: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 213, 79, 0.25);
+  --shadow-soft: 0 20px 60px rgba(2, 16, 58, 0.45);
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 10px;
+
+  --nav-height: 76px;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  font-family: var(--font-body);
+  background: linear-gradient(180deg, var(--navy) 0%, var(--deep-royal-blue) 45%, var(--navy) 100%);
+  color: var(--white);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img{ max-width: 100%; display: block; }
+a{ color: inherit; text-decoration: none; }
+ul{ list-style: none; margin: 0; padding: 0; }
+button{ font-family: inherit; cursor: pointer; }
+
+h1, h2, h3, h4{
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+p{ line-height: 1.7; color: var(--light-blue); }
+
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+section{ position: relative; padding: 90px 0; z-index: 2; }
+
+.section-eyebrow{
+  display: inline-block;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.section-title{
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  color: var(--white);
+}
+
+.section-sub{
+  max-width: 620px;
+  color: var(--light-blue);
+  font-size: 1.05rem;
+}
+
+/* =====================================================
+   Reveal-on-scroll
+   ===================================================== */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.in-view{ opacity: 1; transform: translateY(0); }
+
+/* =====================================================
+   Floating musical decorations
+   ===================================================== */
+#floating-decor{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.float-icon{
+  position: absolute;
+  color: var(--gold);
+  animation-name: floatDrift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes floatDrift{
+  0%   { transform: translate(0,0) rotate(0deg); }
+  100% { transform: translate(18px,-34px) rotate(14deg); }
+}
+
+/* =====================================================
+   Top strip + Header (ABOVE navbar)
+   ===================================================== */
+.site-header{
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 34px 20px 26px;
+  background: radial-gradient(120% 160% at 50% -20%, rgba(255,213,79,0.10), transparent 60%);
+  border-bottom: 1px solid rgba(255,213,79,0.15);
+}
+.site-header .tagline{
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.site-header h1{
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.site-header .parented{
+  color: var(--light-blue);
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+.site-header .ids{
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+/* =====================================================
+   Navbar
+   ===================================================== */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background: rgba(2, 16, 58, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,213,79,0.14);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.navbar.scrolled{
+  background: rgba(2, 16, 58, 0.86);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.navbar .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-brand{
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+}
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav-links > li{ position: relative; }
+.nav-links a{
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--white);
+  padding: 8px 2px;
+  position: relative;
+}
+.nav-links a::after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after{ width: 100%; }
+.nav-links a.active{ color: var(--gold); }
+
+.nav-dropdown{ position: relative; }
+.nav-dropdown-menu{
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 250px;
+  background: rgba(2, 16, 58, 0.96);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+  box-shadow: var(--shadow-soft);
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.nav-dropdown-menu a{
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+.nav-dropdown-menu a:hover{ background: rgba(255,213,79,0.1); }
+.nav-dropdown-menu a::after{ display: none; }
+
+.hamburger{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+}
+.hamburger span{
+  width: 24px; height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.active span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2){ opacity: 0; }
+.hamburger.active span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+/* =====================================================
+   Hero — three column logo layout
+   ===================================================== */
+.hero{
+  padding: 80px 0 60px;
+  text-align: center;
+}
+.hero-logos{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  align-items: center;
+  gap: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.hero-logo-box{
+  width: 100%;
+  max-width: 190px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border: 2px dashed var(--glass-border);
+  border-radius: var(--radius-md);
+  background: var(--glass-fill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.hero-logo-box img{ border-radius: var(--radius-sm); width: 100%; height: 100%; object-fit: contain; }
+.hero-center h2{
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  color: var(--gold);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.hero-center .gang{
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+.hero-note{
+  margin-top: 26px;
+  color: var(--light-blue);
+  font-size: 0.95rem;
+}
+
+/* =====================================================
+   Generic placeholder blocks
+   ===================================================== */
+.placeholder-block{
+  border: 2px dashed var(--glass-border);
+  background: var(--glass-fill);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 20px;
+}
+
+.group-photo-wrap{
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.group-photo-frame{
+  border-radius: var(--radius-lg);
+  height: 420px;
+  margin-bottom: 18px;
+}
+.group-photo-wrap h3{ color: var(--gold); font-weight: 500; font-size: 1.1rem; }
+
+/* =====================================================
+   Two-column content sections (RaC CIT)
+   ===================================================== */
+.two-col{
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+}
+.two-col .placeholder-block{ height: 340px; }
+.two-col-text h2{ color: var(--white); }
+.two-col-text h4{ color: var(--gold); font-size: 1rem; margin-top: 22px; }
+
+/* =====================================================
+   Prayer card
+   ===================================================== */
+.prayer-card{
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(0,43,127,0.55), rgba(2,16,58,0.75));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 56px 44px;
+  box-shadow: var(--shadow-soft);
+}
+.prayer-card h2{ color: var(--gold); }
+.prayer-card p{ font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--white); }
+
+/* =====================================================
+   Theme logo description
+   ===================================================== */
+.theme-logo-circle{
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   Board / Council cards
+   ===================================================== */
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+.member-card{
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 26px 18px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.member-card:hover{
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--gold);
+}
+.member-photo{
+  width: 108px; height: 108px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  border: 2px solid var(--gold);
+}
+.member-name{ font-family: var(--font-display); font-size: 1.05rem; color: var(--white); margin-bottom: 4px; }
+.member-role{ font-size: 0.82rem; color: var(--gold); letter-spacing: 0.03em; }
+
+.view-more-wrap{ text-align: center; margin-top: 46px; }
+
+.btn-gold{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), #f0b73a);
+  color: var(--navy);
+  font-weight: 700;
+  padding: 15px 38px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-gold:hover{ transform: translateY(-3px); box-shadow: 0 14px 30px rgba(255,213,79,0.3); }
+
+.ripple{
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transform: scale(0);
+  animation: rippleAnim 0.6s linear;
+  pointer-events: none;
+}
+@keyframes rippleAnim{ to{ transform: scale(3); opacity: 0; } }
+
+/* =====================================================
+   Page hero banner (inner pages)
+   ===================================================== */
+.page-hero{
+  padding: 70px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,213,79,0.12);
+}
+.page-hero h1{ color: var(--gold); font-size: clamp(2rem, 4vw, 2.8rem); }
+.page-hero p{ max-width: 560px; margin: 0 auto; }
+
+/* =====================================================
+   Avenues / Directory cards
+   ===================================================== */
+.avenue-grid, .directory-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.avenue-card{
+  background: linear-gradient(160deg, rgba(0,43,127,0.5), rgba(2,16,58,0.7));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.avenue-card:hover{ transform: translateY(-6px); border-color: var(--gold); }
+.avenue-card h3{ color: var(--gold); font-size: 1.15rem; }
+
+.directory-card{
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.directory-card:hover{ transform: translateY(-6px); border-color: var(--gold); }
+
+/* =====================================================
+   Event pages — poster gallery
+   ===================================================== */
+.poster-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.poster-card{
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-fill);
+  height: 260px;
+  position: relative;
+}
+.poster-card .placeholder-block{ height: 100%; border: none; border-radius: 0; }
+.poster-card img{ width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.poster-card:hover img{ transform: scale(1.08); }
+.poster-download{
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(2,16,58,0.8);
+  color: var(--gold);
+  font-size: 0.72rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   Gallery page — masonry + lightbox
+   ===================================================== */
+.gallery-filters{
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.gallery-filters button{
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--light-blue);
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+.gallery-filters button.active, .gallery-filters button:hover{
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+.masonry{
+  column-count: 4;
+  column-gap: 18px;
+}
+.masonry-item{
+  break-inside: avoid;
+  margin-bottom: 18px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+}
+.masonry-item img{ width: 100%; transition: transform 0.4s ease; }
+.masonry-item:hover img{ transform: scale(1.06); }
+
+.lightbox-overlay{
+  position: fixed; inset: 0;
+  background: rgba(2,16,58,0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 40px;
+}
+.lightbox-overlay.active{ display: flex; }
+.lightbox-overlay img{ max-width: 90vw; max-height: 85vh; border-radius: var(--radius-md); }
+.lightbox-close{
+  position: absolute; top: 30px; right: 40px;
+  background: none; border: none; color: var(--gold);
+  font-size: 2rem;
+}
+
+/* =====================================================
+   Contact / Footer
+   ===================================================== */
+.contact-footer{
+  background: var(--navy);
+  border-top: 1px solid rgba(255,213,79,0.15);
+  padding: 70px 0 30px;
+}
+.contact-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.contact-columns h3{ color: var(--gold); font-size: 1.1rem; margin-bottom: 18px; }
+.contact-columns ul li{ margin-bottom: 10px; }
+.contact-columns ul li a{ color: var(--light-blue); font-size: 0.92rem; }
+.contact-columns ul li a:hover{ color: var(--gold); }
+.social-icons{ display: flex; gap: 16px; margin-top: 8px; }
+.social-icons a{
+  width: 40px; height: 40px;
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  transition: background 0.3s ease;
+}
+.social-icons a:hover{ background: rgba(255,213,79,0.15); }
+.address-block p{ font-size: 0.92rem; margin: 4px 0; }
+.footer-bottom{
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.8rem;
+  color: var(--light-blue);
+}
+
+/* Contact page (full) uses same structure as footer, reused via .contact-page class */
+.contact-page .contact-columns{ padding-top: 20px; }
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+@media (max-width: 1024px){
+  .card-grid{ grid-template-columns: repeat(2, 1fr); }
+  .avenue-grid, .directory-grid{ grid-template-columns: repeat(2, 1fr); }
+  .poster-grid{ grid-template-columns: repeat(2, 1fr); }
+  .masonry{ column-count: 3; }
+  .two-col{ grid-template-columns: 1fr; }
+  .two-col .placeholder-block{ height: 280px; }
+}
+
+@media (max-width: 860px){
+  .nav-links{
+    position: fixed;
+    top: var(--nav-height);
+    right: 0;
+    height: calc(100vh - var(--nav-height));
+    width: 78%;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 26px;
+    background: rgba(2,16,58,0.97);
+    border-left: 1px solid var(--glass-border);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    gap: 22px;
+    overflow-y: auto;
+  }
+  .nav-links.open{ transform: translateX(0); }
+  .hamburger{ display: flex; }
+  .nav-dropdown-menu{
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+    box-shadow: none;
+    background: rgba(255,255,255,0.03);
+    margin-top: 8px;
+    width: 100%;
+  }
+  .nav-dropdown.open .nav-dropdown-menu{ display: block; }
+  .hero-logos{ grid-template-columns: 1fr; }
+  .contact-columns{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px){
+  .card-grid{ grid-template-columns: 1fr; }
+  .avenue-grid, .directory-grid{ grid-template-columns: 1fr; }
+  .poster-grid{ grid-template-columns: 1fr; }
+  .masonry{ column-count: 1; }
+  section{ padding: 60px 0; }
+}
