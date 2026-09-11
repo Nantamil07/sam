@@ -112,37 +112,10 @@ function buildFooter(){
 }
 
 function buildFloatingDecor(){
-  const icons = [
-    // music note
-    `<svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor"><path d="M9 17V5l12-2v12"/><circle cx="6" cy="17" r="3"/><circle cx="18" cy="15" r="3"/></svg>`,
-    // treble clef-ish (simplified swirl)
-    `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-2 2-3 4-3 6s2 3 3 5-1 5-3 5-3-2-2-4"/></svg>`,
-    // vinyl disc
-    `<svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>`,
-    // headphones
-    `<svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/></svg>`,
-    // guitar (simplified body + neck)
-    `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="16" r="5"/><path d="M11 12l7-9"/><path d="M15 6l3 2"/></svg>`,
-    // microphone
-    `<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0"/><path d="M12 18v4"/></svg>`,
-    // sparkle
-    `<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg>`,
-  ];
-
-  let html = '';
-  const positions = [
-    [4,10],[12,70],[22,25],[30,85],[40,15],[48,55],[58,80],
-    [65,8],[72,45],[80,90],[86,20],[92,60],[15,40],[55,30]
-  ];
-  positions.forEach((pos, i) => {
-    const icon = icons[i % icons.length];
-    const size = 0.7 + (i % 4) * 0.25;
-    const duration = 10 + (i % 6) * 2.4;
-    const delay = (i % 5) * 1.3;
-    const opacity = 0.1 + (i % 3) * 0.05;
-    html += `<div class="float-icon" style="top:${pos[0]}%; left:${pos[1]}%; opacity:${opacity}; transform:scale(${size}); animation-duration:${duration}s; animation-delay:${delay}s;">${icon}</div>`;
-  });
-  return html;
+  // Decorative floating icons were removed as part of the professional
+  // restyle — #floating-decor is hidden in style.css and this mount point
+  // is left empty intentionally.
+  return '';
 }
 
 /* ---------- Inject shared markup ---------- */
@@ -172,8 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initImageFallbacks(){
   document.querySelectorAll('img').forEach(img => {
     img.addEventListener('error', function(){
-      this.style.background = 'linear-gradient(160deg, rgba(0,43,127,0.6), rgba(2,16,58,0.8))';
-      this.style.border = '2px dashed rgba(255,213,79,0.25)';
+      this.style.background = '#F0F2F8';
+      this.style.border = '1px dashed #C7CEDB';
       this.style.minHeight = '160px';
       this.style.objectFit = 'contain';
       this.alt = this.alt || 'Image placeholder — add your image to this path';
