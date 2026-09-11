@@ -74,6 +74,7 @@ function buildFooter(){
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <br>
       <h3 style="margin-top:28px;">Follow Us</h3>
       <div class="social-icons">
         <a href="#" aria-label="Instagram" data-placeholder-link>IG</a>
