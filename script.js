@@ -7,7 +7,13 @@
 
 const NAV_LINKS = [
   { href: 'index.html', label: 'Home' },
-  { href: 'avenues.html', label: 'Avenues' },
+  { href: 'events', label: 'Avenues', dropdown: [
+      { href: 'event1.html', label: 'Club Service' },
+      { href: 'event2.html', label: 'Community Service' },
+      { href: 'event3.html', label: 'Professional Service' },
+      { href: 'event4.html', label: 'International Service' },
+      { href: 'event5.html', label: 'District Priority Project' },
+  ]},
   { href: 'council.html', label: 'Council' },
   { href: 'directory.html', label: 'Directory' },
   { href: 'events', label: 'Events', dropdown: [
@@ -15,7 +21,7 @@ const NAV_LINKS = [
       { href: 'event2.html', label: 'Community Service Events' },
       { href: 'event3.html', label: 'Professional Service Events' },
       { href: 'event4.html', label: 'International Service Events' },
-      { href: 'event5.html', label: 'Special Events' },
+      { href: 'event5.html', label: 'DISTRICT PRIORITY PROJECT' },
   ]},
   { href: 'gallery.html', label: 'Gallery' },
   { href: 'contact.html', label: 'Contact' },
@@ -74,7 +80,6 @@ function buildFooter(){
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <br>
       <br>
       <h3 style="margin-top:28px;">Follow Us</h3>
       <div class="social-icons">
