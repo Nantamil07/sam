@@ -65,34 +65,38 @@ function buildFooter(){
     <footer class="contact-footer" id="siteFooter">
       <div class="container contact-columns">
         <div>
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="avenues.html">Avenues</a></li>
-            <li><a href="council.html">Council</a></li>
-            <li><a href="event1.html">Events</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <h3 style="margin-top:28px;">Follow Us</h3>
-          <div class="social-icons">
-            <a href="#" aria-label="Instagram" data-placeholder-link>IG</a>
-            <a href="#" aria-label="Facebook" data-placeholder-link>FB</a>
-            <a href="#" aria-label="LinkedIn" data-placeholder-link>IN</a>
-            <a href="#" aria-label="YouTube" data-placeholder-link>YT</a>
-          </div>
-        </div>
-        <div class="address-block">
-          <h3>Contact Us</h3>
-          <p>Rotaract Club of Coimbatore Institute of Technology</p>
-          <p>Coimbatore Institute of Technology</p>
-          <p>Civil Aerodrome Post, Peelamedu</p>
-          <p>Coimbatore – 641014</p>
-          <p>President: [Phone placeholder]</p>
-          <p>Secretary: [Phone placeholder]</p>
-          <p>Email: [email placeholder]</p>
-        </div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="avenues.html">Avenues</a></li>
+        <li><a href="council.html">Council</a></li>
+        <li><a href="event1.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <h3 style="margin-top:28px;">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram" data-placeholder-link>IG</a>
+        <a href="#" aria-label="Facebook" data-placeholder-link>FB</a>
+        <a href="#" aria-label="LinkedIn" data-placeholder-link>IN</a>
+        <a href="#" aria-label="YouTube" data-placeholder-link>YT</a>
       </div>
+    </div>
+    <div class="address-block">
+      <h3>Contact Us</h3>
+      <p>Rotaract Club of Coimbatore Institute of Technology</p>
+      <p>Coimbatore Institute of Technology</p>
+      <p>Civil Aerodrome Post, Peelamedu</p>
+      <p>Coimbatore – 641014</p>
+      <br>
+      <p>Rtr. Varsha P V (President)               : 9600298552</p>
+      <p>Rtr. Vaisali S (Secretary Administrations): 9384728901</p>
+      <p>Rtr. Meghna J (Secretary Communications)  : 8925153138</p>
+      <br>
+      <p>Email: rcofcitsecretary@gmail.com</p>
+    </div>
+  </div>
+
       <div class="footer-bottom">
         &copy; <span id="footerYear"></span> Rotaract Club of Coimbatore Institute of Technology — Gang 51. All rights reserved.
       </div>
