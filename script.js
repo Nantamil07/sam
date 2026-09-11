@@ -25,6 +25,7 @@ const NAV_LINKS = [
   ]},
   { href: 'gallery.html', label: 'Gallery' },
   { href: 'contact.html', label: 'Contact' },
+   { href: 'bulletin.html', label: 'Bulletin' },
 ];
 
 function currentPage(){
