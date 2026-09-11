@@ -1,235 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Bulletin | RAGA — Gang 51</title>
-
-    <link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulletin | RAGA — Gang 51</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
-
-<body style="
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
-">
-
-
-    <div id="floating-decor"></div>
-
-    <div id="site-navbar"></div>
-
-
-    <!-- =========================
-         BULLETIN CONTENT START
-    ========================== -->
-
-    <main>
-
-        <section
-            id="bulletin"
-            style="
-                width: 100%;
-                padding: 70px 20px 80px;
-                background-color: #ffffff;
-            "
-        >
-
-            <div
-                style="
-                    width: 90%;
-                    max-width: 1100px;
-                    margin: 0 auto;
-                "
-            >
-
-
-                <!-- PAGE TITLE -->
-
-                <header>
-
-                    <h1
-                        style="
-                            margin: 0 0 50px 0;
-                            text-align: center;
-                            font-size: 42px;
-                            font-weight: 600;
-                            color: #222222;
-                            letter-spacing: 1px;
-                        "
-                    >
-                        BULLETIN
-                    </h1>
-
-                </header>
-
-
-                <!-- =========================
-                     BULLETIN SECTION
-                ========================== -->
-
-                <section
-                    id="bulletin-list"
-                    aria-label="Club Bulletins"
-                >
-
-                    <div
-                        style="
-                            display: grid;
-                            grid-template-columns: repeat(2, 1fr);
-                            gap: 40px;
-                            max-width: 1000px;
-                            margin: 0 auto;
-                        "
-                    >
-
-
-                        <!-- BULLETIN 1 -->
-
-                        <article>
-
-                            <figure
-                                style="
-                                    margin: 0;
-                                    width: 100%;
-                                "
-                            >
-
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style="
-                                        display: block;
-                                        text-decoration: none;
-                                    "
-                                >
-
-                                    <img
-                                        src="images/bulletin-1.jpg"
-                                        alt="First Club Bulletin"
-                                        style="
-                                            display: block;
-                                            width: 100%;
-                                            height: auto;
-                                            object-fit: contain;
-                                        "
-                                    >
-
-                                </a>
-
-                            </figure>
-
-                        </article>
-
-
-                        <!-- BULLETIN 2 -->
-
-                        <article>
-
-                            <figure
-                                style="
-                                    margin: 0;
-                                    width: 100%;
-                                "
-                            >
-
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style="
-                                        display: block;
-                                        text-decoration: none;
-                                    "
-                                >
-
-                                    <img
-                                        src="images/bulletin-2.jpg"
-                                        alt="Second Club Bulletin"
-                                        style="
-                                            display: block;
-                                            width: 100%;
-                                            height: auto;
-                                            object-fit: contain;
-                                        "
-                                    >
-
-                                </a>
-
-                            </figure>
-
-                        </article>
-
-
-                    </div>
-
-                </section>
-
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         BULLETIN CONTENT END
-    ========================== -->
-
-
-    <div id="site-footer"></div>
-
-
-    <script src="script.js"></script>
-
-
-    <!-- RESPONSIVE BULLETIN LAYOUT -->
-
-    <style>
-
-        @media (max-width: 768px) {
-
-            #bulletin-list > div {
-                grid-template-columns: 1fr !important;
-                gap: 30px !important;
-            }
-
-            #bulletin {
-                padding: 55px 15px 70px !important;
-            }
-
-            #bulletin h1 {
-                font-size: 36px !important;
-                margin-bottom: 40px !important;
-            }
-
-        }
-
-
-        @media (max-width: 480px) {
-
-            #bulletin h1 {
-                font-size: 30px !important;
-            }
-
-        }
-
-    </style>
-
-
+<body>
+
+<div id="floating-decor"></div>
+<div id="site-navbar"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-eyebrow">Publications</span>
+    <h1>Bulletin</h1>
+    <p>Our club's periodic bulletins — a record of activity, milestones and members' voices.</p>
+  </div>
+</section>
+
+<section class="reveal content-page">
+  <div class="container">
+    <div class="bulletin-grid">
+      <article class="bulletin-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="assets/bulletin/bulletin-1.jpg" alt="First Club Bulletin">
+        </a>
+      </article>
+      <article class="bulletin-card">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="assets/bulletin/bulletin-2.jpg" alt="Second Club Bulletin">
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
