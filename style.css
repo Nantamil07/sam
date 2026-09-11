@@ -651,3 +651,7 @@ section{ position: relative; padding: 90px 0; z-index: 2; }
   .masonry{ column-count: 1; }
   section{ padding: 60px 0; }
 }
+
+
+.member-photo{ overflow:hidden; }
+.member-photo img{ width:100%; height:100%; object-fit:cover; }
