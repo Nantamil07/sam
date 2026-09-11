@@ -1,324 +1,53 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Contact | RAGA — Gang 51</title>
-
-    <link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | RAGA — Gang 51</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
-
-<body style="
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
-">
-
-
-    <div id="floating-decor"></div>
-
-    <div id="site-navbar"></div>
-
-
-    <!-- =========================
-         CONTACT CONTENT START
-    ========================== -->
-
-    <main>
-
-        <section
-            id="contact"
-            style="
-                width: 100%;
-                padding: 70px 20px 80px;
-                background-color: #ffffff;
-            "
-        >
-
-            <div
-                style="
-                    width: 90%;
-                    max-width: 1100px;
-                    margin: 0 auto;
-                "
-            >
-
-
-                <!-- PAGE TITLE -->
-
-                <header>
-
-                    <h1
-                        style="
-                            margin: 0 0 30px 0;
-                            text-align: center;
-                            font-size: 42px;
-                            font-weight: 600;
-                            color: #222222;
-                        "
-                    >
-                        Contact Us
-                    </h1>
-
-                </header>
-
-
-                <!-- INTRODUCTION -->
-
-                <div
-                    style="
-                        max-width: 850px;
-                        margin: 0 auto 55px auto;
-                    "
-                >
-
-                    <p
-                        style="
-                            margin: 0;
-                            text-align: center;
-                            font-size: 17px;
-                            line-height: 1.8;
-                            color: #666666;
-                        "
-                    >
-                        We are always on the lookout for passionate
-                        individuals who are ready to make an impact in
-                        the world of serving people.
-                    </p>
-
-                    <p
-                        style="
-                            margin: 10px 0 0 0;
-                            text-align: center;
-                            font-size: 17px;
-                            line-height: 1.8;
-                            color: #666666;
-                        "
-                    >
-                        If you have the talent and willingness to serve,
-                        we want to hear from you.
-                    </p>
-
-                </div>
-
-
-                <!-- =========================
-                     CONTACT FORM
-                ========================== -->
-
-                <section
-                    id="contact-form"
-                    aria-label="Contact form"
-                    style="
-                        max-width: 700px;
-                        margin: 0 auto;
-                    "
-                >
-
-                    <header>
-
-                        <h2
-                            style="
-                                margin: 0 0 35px 0;
-                                text-align: center;
-                                font-size: 30px;
-                                font-weight: 600;
-                                color: #222222;
-                            "
-                        >
-                            Contact us
-                        </h2>
-
-                    </header>
-
-
-                    <form
-                        action="#"
-                        method="post"
-                    >
-
-
-                        <!-- NAME -->
-
-                        <div
-                            style="
-                                margin-bottom: 25px;
-                            "
-                        >
-
-                            <label
-                                for="name"
-                                style="
-                                    display: block;
-                                    margin-bottom: 8px;
-                                    font-size: 16px;
-                                    color: #444444;
-                                "
-                            >
-                                Name<span style="color: #d91b5c;">*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                required
-                                style="
-                                    width: 100%;
-                                    padding: 14px 15px;
-                                    border: 1px solid #cccccc;
-                                    border-radius: 4px;
-                                    font-size: 16px;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    box-sizing: border-box;
-                                    outline: none;
-                                "
-                            >
-
-                        </div>
-
-
-                        <!-- EMAIL -->
-
-                        <div
-                            style="
-                                margin-bottom: 25px;
-                            "
-                        >
-
-                            <label
-                                for="email"
-                                style="
-                                    display: block;
-                                    margin-bottom: 8px;
-                                    font-size: 16px;
-                                    color: #444444;
-                                "
-                            >
-                                Email<span style="color: #d91b5c;">*</span>
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                style="
-                                    width: 100%;
-                                    padding: 14px 15px;
-                                    border: 1px solid #cccccc;
-                                    border-radius: 4px;
-                                    font-size: 16px;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    box-sizing: border-box;
-                                    outline: none;
-                                "
-                            >
-
-                        </div>
-
-
-                        <!-- MESSAGE -->
-
-                        <div
-                            style="
-                                margin-bottom: 30px;
-                            "
-                        >
-
-                            <label
-                                for="message"
-                                style="
-                                    display: block;
-                                    margin-bottom: 8px;
-                                    font-size: 16px;
-                                    color: #444444;
-                                "
-                            >
-                                Write a message
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="6"
-                                style="
-                                    width: 100%;
-                                    padding: 14px 15px;
-                                    border: 1px solid #cccccc;
-                                    border-radius: 4px;
-                                    font-size: 16px;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    box-sizing: border-box;
-                                    resize: vertical;
-                                    outline: none;
-                                "
-                            ></textarea>
-
-                        </div>
-
-
-                        <!-- SUBMIT -->
-
-                        <div
-                            style="
-                                text-align: center;
-                            "
-                        >
-
-                            <button
-                                type="submit"
-                                style="
-                                    padding: 13px 35px;
-                                    border: none;
-                                    border-radius: 4px;
-                                    font-size: 16px;
-                                    cursor: pointer;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                "
-                            >
-                                Submit
-                            </button>
-
-                        </div>
-
-
-                    </form>
-
-                </section>
-
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         CONTACT CONTENT END
-    ========================== -->
-
-
-    <div id="site-footer"></div>
-
-
-    <script src="script.js"></script>
-
-
+<body>
+
+<div id="floating-decor"></div>
+<div id="site-navbar"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-eyebrow">Get In Touch</span>
+    <h1>Contact Us</h1>
+    <p>We are always on the lookout for passionate individuals ready to make an impact through service. If you have the talent and willingness to serve, we want to hear from you.</p>
+  </div>
+</section>
+
+<section class="reveal content-page">
+  <div class="container contact-layout">
+    <h2 class="content-subtitle">Send Us a Message</h2>
+
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name" class="form-label">Name <span class="form-required">*</span></label>
+        <input type="text" id="name" name="name" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email <span class="form-required">*</span></label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="form-label">Write a Message</label>
+        <textarea id="message" name="message" rows="6" class="form-textarea"></textarea>
+      </div>
+
+      <div class="form-submit-wrap">
+        <button type="submit" class="btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
-```
