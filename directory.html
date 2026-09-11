@@ -6,34 +6,207 @@
 <title>Directory | RAGA — Gang 51</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body style=" margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background-color: #ffffff; color: #333333; ">
 <div id="floating-decor"></div>
 <div id="site-navbar"></div>
+<!-- ===== ABOUT / HISTORY / PORTFOLIO SECTION (paste between navbar and footer) ===== -->
+<style>
+  #about-page{ font-family:'Inter',sans-serif; color:#fff; }
+  #about-page .container{ max-width:1180px; margin:0 auto; padding:0 28px; }
+  #about-page section{ padding:80px 0; position:relative; z-index:2; }
+  #about-page h2{ font-family:'Fraunces',serif; font-weight:600; color:var(--gold,#FFD54F); font-size:clamp(1.7rem,3vw,2.4rem); margin:0 0 18px; }
+  #about-page p{ line-height:1.75; color:var(--light-blue,#DDEBFF); }
+  #about-page .eyebrow{ display:inline-block; color:var(--gold,#FFD54F); font-family:'Fraunces',serif; font-style:italic; margin-bottom:8px; }
 
-<section class="page-hero">
-  <div class="container">
-    <span class="section-eyebrow">Contacts</span>
-    <h1>Club Directory</h1>
-    <p>Key office bearers of Gang 51 and how the club is organized.</p>
-  </div>
-</section>
+  #about-page .two-col{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:50px; align-items:center; }
+  #about-page .logo-block{
+    border:2px dashed rgba(255,213,79,0.35); background:rgba(255,255,255,0.06);
+    border-radius:18px; height:220px; display:flex; align-items:center; justify-content:center;
+    color:var(--gold,#FFD54F); font-size:0.85rem; letter-spacing:.04em;
+  }
+  #about-page .btn-gold{
+    display:inline-block; margin-top:18px; background:linear-gradient(135deg,var(--gold,#FFD54F),#f0b73a);
+    color:#02103A; font-weight:700; padding:12px 30px; border-radius:999px; border:none;
+    font-size:0.9rem; cursor:pointer; text-decoration:none; transition:transform .3s ease, box-shadow .3s ease;
+  }
+  #about-page .btn-gold:hover{ transform:translateY(-3px); box-shadow:0 14px 30px rgba(255,213,79,0.3); }
 
-<section class="reveal">
-  <div class="container">
-    <div class="directory-grid">
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">President</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Immediate Past President</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Secretary</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Vice President</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Treasurer</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Joint Secretary</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Sergeant at Arms</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Club Advisor</div></div>
-      <div class="directory-card"><div class="placeholder-block member-photo">Photo</div><div class="member-name">[Name Placeholder]</div><div class="member-role">Faculty Coordinator</div></div>
+  #about-page .history-card{
+    max-width:820px; margin:0 auto; background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,213,79,0.2); border-radius:22px; padding:40px; text-align:center;
+  }
+
+  #about-page .achieve-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:20px; }
+  #about-page .achieve-card{
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,213,79,0.25); border-radius:18px;
+    padding:30px 22px; text-align:center; cursor:pointer; transition:transform .3s ease, border-color .3s ease;
+  }
+  #about-page .achieve-card:hover{ transform:translateY(-6px); border-color:var(--gold,#FFD54F); }
+  #about-page .achieve-icon{
+    width:64px; height:64px; margin:0 auto 14px; border-radius:50%;
+    border:2px solid var(--gold,#FFD54F); display:flex; align-items:center; justify-content:center;
+    color:var(--gold,#FFD54F); font-size:1.4rem;
+  }
+  #about-page .achieve-card h4{ font-family:'Fraunces',serif; color:#fff; margin:0 0 10px; }
+  #about-page .achieve-detail{ display:none; font-size:0.88rem; margin-top:10px; }
+  #about-page .achieve-card.open .achieve-detail{ display:block; }
+
+  #about-page .stats-wrap{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center; margin-top:30px; }
+  #about-page .stat-box{ background:rgba(255,255,255,0.05); border:1px solid rgba(255,213,79,0.2); border-radius:14px; padding:20px 10px; }
+  #about-page .stat-box .num{ font-family:'Fraunces',serif; color:var(--gold,#FFD54F); font-size:1.6rem; display:block; }
+  #about-page .stat-box .label{ font-size:0.78rem; color:#DDEBFF; letter-spacing:.03em; }
+
+  #about-page .sister-list{ list-style:none; padding:0; margin:24px auto 0; max-width:600px; text-align:left; }
+  #about-page .sister-list li{ padding:10px 16px; border-bottom:1px solid rgba(255,213,79,0.12); }
+
+  #about-page .test-card{
+    max-width:760px; margin:0 auto; text-align:center;
+    background:linear-gradient(160deg, rgba(0,43,127,0.55), rgba(2,16,58,0.75));
+    border:1px solid rgba(255,213,79,0.25); border-radius:28px; padding:56px 44px;
+    box-shadow:0 20px 60px rgba(2,16,58,0.45);
+  }
+  #about-page .test-card ol{ text-align:left; padding-left:22px; margin:0; line-height:1.9; }
+
+  #about-page .directory-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:40px; }
+  #about-page .directory-card{
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,213,79,0.25); border-radius:16px;
+    padding:24px 18px; text-align:center; opacity:0; transform:translateY(20px);
+    transition:opacity .5s ease, transform .4s ease, border-color .3s ease;
+  }
+  #about-page .directory-card.in-view{ opacity:1; transform:translateY(0); }
+  #about-page .directory-card:hover{ border-color:var(--gold,#FFD54F); transform:translateY(-5px); }
+  #about-page .member-role{ font-family:'Fraunces',serif; color:#fff; font-size:0.98rem; }
+
+  @media (max-width:900px){
+    #about-page .two-col{ grid-template-columns:1fr; }
+    #about-page .achieve-grid{ grid-template-columns:1fr; }
+    #about-page .stats-wrap{ grid-template-columns:repeat(2,1fr); }
+    #about-page .directory-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:560px){ #about-page .directory-grid{ grid-template-columns:1fr; } }
+</style>
+
+<div id="about-page">
+
+  <!-- Rotary International -->
+  <section>
+    <div class="container two-col">
+      <div class="logo-block">Rotary International Logo</div>
+      <div>
+        <span class="eyebrow"></span>
+        <h2>Rotary International</h2>
+        <p>Rotary brings together business and professional leaders from around the world who volunteer their time and skills to tackle community and global challenges. Our club operates as part of this larger network, channeling that same spirit of service into local action.</p>
+        <a href="https://www.rotary.org/en" target="_blank" class="btn-gold">Read More</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- History -->
+  <section>
+    <div class="container">
+      <div class="history-card">
+        <span class="eyebrow"></span>
+        <h2>History of Rotary &amp; Rotaract</h2>
+        <p>Rotary traces its roots to a small gathering of professionals in early-1900s Chicago, an idea that soon spread across cities and, within a few years, across borders. Decades later, that same spirit gave rise to Rotaract, a youth-focused extension of Rotary's mission, with its first clubs forming in the late 1960s — including some of the earliest chapters in India.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rotaract 3206 overview -->
+  <section>
+    <div class="container">
+      <span class="eyebrow"></span>
+      <h2>Rotaract 3206</h2>
+      <p style="max-width:760px;">Rotaract brings together young people to grow personally and professionally while serving their communities, built on the idea that collective effort achieves far more than any one person alone. Our club sits within Region 7 (South Asia), and District 3206, which spans Coimbatore and Palakkad.</p>
+      <div class="stats-wrap">
+        <div class="stat-box"><span class="num">7</span><span class="label">Regions Worldwide</span></div>
+        <div class="stat-box"><span class="num">34</span><span class="label">Zones</span></div>
+        <div class="stat-box"><span class="num">530</span><span class="label">Districts</span></div>
+        <div class="stat-box"><span class="num">3206</span><span class="label">Our District</span></div>
+      </div>
+      <p style="margin-top:30px;">We're proud to be paired with several sister clubs across the district:</p>
+      <ul class="sister-list" id="sisterList"></ul>
+    </div>
+  </section>
+
+  <!-- Four Way Test -->
+  <section>
+    <div class="container">
+      <div class="test-card">
+        <span class="eyebrow"></span>
+        <h2>The Four-Way Test</h2>
+        <p style="margin-bottom:20px;">Of the things we think, say, or do:</p>
+        <ol>
+          <li>Is it the TRUTH?</li>
+          <li>Is it FAIR to all concerned?</li>
+          <li>Will it build GOODWILL and BETTER FRIENDSHIPS?</li>
+          <li>Will it be BENEFICIAL to all concerned?</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section>
+    <div class="container">
+      <span class="eyebrow"></span>
+      <h2>Portfolio</h2>
+      <div class="directory-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  // Achievement cards toggle
+  document.querySelectorAll('#achieveGrid .achieve-card').forEach(function(card){
+    card.addEventListener('click', function(){ card.classList.toggle('open'); });
+  });
+
+  // Sister clubs list
+  var sisters = [
+    "Rotaract Club of Coimbatore Unity",
+    "Rotaract Club of PSGR Krishnammal College for Women",
+    "Rotaract Club of GCT",
+    "Rotaract Club of PPG",
+    "Rotaract Club of Dr. NGP Institute of Technology"
+  ];
+  var sisterList = document.getElementById('sisterList');
+  sisters.forEach(function(name){
+    var li = document.createElement('li');
+    li.textContent = name;
+    sisterList.appendChild(li);
+  });
+
+  // Portfolio list
+  var portfolios = [
+    "President", "Immediate Past President", "Secretary", "Vice President",
+    "Joint Secretary", "Treasurer", "Sergeant at Arms", "All Avenues Chair",
+    "Director of Club Service", "Director of Professional Service",
+    "Director of Community Service", "Director of International Service",
+    "Director of District Priority Projects", "Director of Publications",
+    "Director of Rotary Foundation", "Director of Outreach",
+    "Rotaract Membership Chair", "Rotaract Learning Facilitator",
+    "Rotaract Youth Leaders Contact", "Club Advisors"
+  ];
+  var grid = document.getElementById('portfolioGrid');
+  portfolios.forEach(function(role){
+    var card = document.createElement('div');
+    card.className = 'directory-card';
+    card.innerHTML = '<div class="member-role">' + role + '</div>';
+    grid.appendChild(card);
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('in-view'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.15 });
+  grid.querySelectorAll('.directory-card').forEach(function(c){ observer.observe(c); });
+})();
+</script>
+<!-- ===== END SECTION ===== -->
 
 <div id="site-footer"></div>
 
