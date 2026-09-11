@@ -1,0 +1,219 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bulletin</title>
+</head>
+
+
+<body style="
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+">
+
+
+    <!-- =========================
+         MAIN BULLETIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <section
+            id="bulletin"
+            style="
+                width: 100%;
+                padding: 60px 20px 80px;
+                background-color: #ffffff;
+            "
+        >
+
+            <div
+                style="
+                    width: 90%;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                "
+            >
+
+
+                <!-- PAGE TITLE -->
+
+                <header>
+
+                    <h1
+                        style="
+                            margin: 0 0 50px 0;
+                            text-align: center;
+                            font-size: 40px;
+                            font-weight: 600;
+                            color: #222222;
+                            letter-spacing: 1px;
+                        "
+                    >
+                        BULLETIN
+                    </h1>
+
+                </header>
+
+
+                <!-- =========================
+                     BULLETIN ITEMS
+                ========================== -->
+
+                <section
+                    id="bulletin-list"
+                    aria-label="Bulletin publications"
+                >
+
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: repeat(2, minmax(0, 1fr));
+                            gap: 45px 50px;
+                            max-width: 1050px;
+                            margin: 0 auto;
+                        "
+                    >
+
+
+                        <!-- BULLETIN 1 -->
+
+                        <article>
+
+                            <figure
+                                style="
+                                    margin: 0;
+                                    width: 100%;
+                                "
+                            >
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="
+                                        display: block;
+                                        text-decoration: none;
+                                    "
+                                >
+
+                                    <img
+                                        src="images/bulletin-1.jpg"
+                                        alt="First Rotaract Club Bulletin"
+                                        style="
+                                            display: block;
+                                            width: 100%;
+                                            height: auto;
+                                            object-fit: contain;
+                                        "
+                                    >
+
+                                </a>
+
+                            </figure>
+
+                        </article>
+
+
+                        <!-- BULLETIN 2 -->
+
+                        <article>
+
+                            <figure
+                                style="
+                                    margin: 0;
+                                    width: 100%;
+                                "
+                            >
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="
+                                        display: block;
+                                        text-decoration: none;
+                                    "
+                                >
+
+                                    <img
+                                        src="images/bulletin-2.jpg"
+                                        alt="Second Rotaract Club Bulletin"
+                                        style="
+                                            display: block;
+                                            width: 100%;
+                                            height: auto;
+                                            object-fit: contain;
+                                        "
+                                    >
+
+                                </a>
+
+                            </figure>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         RESPONSIVE DESIGN
+    ========================== -->
+
+    <style>
+
+        @media (max-width: 768px) {
+
+            #bulletin-list > div {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+
+            #bulletin {
+                padding: 50px 15px 60px !important;
+            }
+
+            #bulletin h1 {
+                font-size: 34px !important;
+                margin-bottom: 40px !important;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            #bulletin h1 {
+                font-size: 30px !important;
+            }
+
+        }
+
+    </style>
+
+
+</body>
+
+</html>
+```
