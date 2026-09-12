@@ -323,18 +323,18 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   font-size: 0.82rem;
   letter-spacing: 0.03em;
   text-align: center;
-  padding: 20px;
+  padding: 0px;
 }
 
 .group-photo-wrap{
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 .group-photo-frame{
   border-radius: var(--radius-lg);
-  height: 420px;
-  margin-bottom: 18px;
+  height: 520px;
+  margin-bottom: 36px;
 }
 .group-photo-wrap h3{ color: var(--navy); font-weight: 600; font-size: 1.05rem; }
 
