@@ -525,15 +525,15 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
    ===================================================== */
 .poster-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
 }
 .poster-card{
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  height: 480px;
+  height: 600px;
   position: relative;
 }
 .poster-card .placeholder-block{ height: 100%; border: none; border-radius: 0; }
