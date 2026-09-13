@@ -56,7 +56,7 @@ function buildNavbar(){
   return `
     <nav class="navbar" id="mainNavbar">
       <div class="container">
-        <a href="index.html" class="nav-brand">RAGA · Gang 51</a>
+        <a href="index.html" class="nav-brand">ராகா · Gang 51</a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
