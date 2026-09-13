@@ -3,7 +3,7 @@
    Stylesheet — Professional Navy & Gold theme
    ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
   /* Core palette */
@@ -31,8 +31,11 @@
   --shadow-md: 0 10px 28px rgba(16, 39, 90, 0.10);
   --shadow-lg: 0 20px 44px rgba(10, 27, 61, 0.16);
 
-  --font-display: 'Fraunces', serif;
-  --font-body: 'Inter', sans-serif;
+  /* Professional, standard font pairing:
+     Source Serif 4 for headings (clean, normal-weight serif —
+     no stylized display characteristics), Inter for body copy. */
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --radius-lg: 16px;
   --radius-md: 12px;
@@ -48,6 +51,7 @@ html{ scroll-behavior: smooth; }
 body{
   margin: 0;
   font-family: var(--font-body);
+  font-size: 17px;
   background: var(--bg);
   color: var(--ink);
   overflow-x: hidden;
@@ -63,12 +67,14 @@ button{ font-family: inherit; cursor: pointer; }
 h1, h2, h3, h4{
   font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--navy);
   margin: 0 0 0.5em;
 }
 
-p{ line-height: 1.75; color: var(--ink-muted); }
+h1{font-size:1.50rem;}
+
+p{ line-height: 1.75; color: var(--ink-muted); font-size: 1.15rem; }
 
 .container{
   max-width: 1180px;
@@ -83,21 +89,21 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   color: var(--gold);
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-size: 1.20rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .section-title{
-  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  font-size: clamp(1.85rem, 2.7vw, 2.45rem);
   color: var(--navy);
 }
 
 .section-sub{
   max-width: 620px;
   color: var(--ink-muted);
-  font-size: 1.02rem;
+  font-size: 1.20rem;
 }
 
 /* =====================================================
@@ -125,26 +131,26 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   border-bottom: 3px solid var(--gold);
 }
 .site-header .tagline{
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
   color: var(--gold-light);
   text-transform: uppercase;
   margin-bottom: 10px;
   font-weight: 600;
 }
 .site-header h1{
-  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  font-size: clamp(1.4rem, 2.7vw, 1.8rem);
   color: var(--white);
   margin-bottom: 8px;
 }
 .site-header .parented{
   color: var(--on-dark-muted);
-  font-size: 0.92rem;
+  font-size: 0.97rem;
   margin: 4px 0;
 }
 .site-header .ids{
   color: var(--on-dark-muted);
-  font-size: 0.82rem;
+  font-size: 0.87rem;
   letter-spacing: 0.03em;
 }
 
@@ -174,7 +180,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 .nav-brand{
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.16rem;
   color: var(--navy);
   letter-spacing: 0.01em;
 }
@@ -185,7 +191,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 }
 .nav-links > li{ position: relative; }
 .nav-links a{
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   font-weight: 500;
   color: var(--ink);
   padding: 8px 2px;
@@ -230,7 +236,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   display: block;
   padding: 10px 14px;
   border-radius: 6px;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   color: var(--ink);
 }
 .nav-dropdown-menu a:hover{ background: var(--surface-alt); color: var(--navy); }
@@ -286,19 +292,19 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   text-align: center;
   padding: 0px;
   color: var(--ink-muted);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .hero-logo-box img{ border-radius: var(--radius-sm); width: 100%; height: 100%; object-fit: fill; }
 .hero-center h2{
-  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+  font-size: clamp(2.3rem, 5.6vw, 3.5rem);
   color: var(--navy);
   margin-bottom: 4px;
-  line-height: 1;
+  line-height: 1.05;
 }
 .hero-center .gang{
-  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  font-size: clamp(1.16rem, 2.5vw, 1.56rem);
   color: var(--gold);
   font-family: var(--font-display);
   font-weight: 600;
@@ -306,7 +312,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 .hero-note{
   margin-top: 24px;
   color: var(--ink-muted);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
 }
 
 /* =====================================================
@@ -320,7 +326,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   align-items: center;
   justify-content: center;
   color: var(--ink-muted);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   letter-spacing: 0.03em;
   text-align: center;
   padding: 0px;
@@ -336,7 +342,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   height: 520px;
   margin-bottom: 36px;
 }
-.group-photo-wrap h3{ color: var(--navy); font-weight: 600; font-size: 1.05rem; }
+.group-photo-wrap h3{ color: var(--navy); font-weight: 600; font-size: 1.1rem; }
 
 /* =====================================================
    Two-column content sections
@@ -349,7 +355,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 }
 .two-col .placeholder-block{ height: 340px; }
 .two-col-text h2{ color: var(--navy); }
-.two-col-text h4{ color: var(--gold); font-size: 0.95rem; margin-top: 22px; }
+.two-col-text h4{ color: var(--gold); font-size: 1rem; margin-top: 22px; }
 
 /* =====================================================
    Prayer card
@@ -364,7 +370,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   box-shadow: var(--shadow-lg);
 }
 .prayer-card h2{ color: var(--gold-light); }
-.prayer-card p{ font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; color: var(--on-dark); white-space: pre-line; }
+.prayer-card p{ font-family: var(--font-display); font-weight: 500; font-size: 1.16rem; color: var(--on-dark); white-space: pre-line; }
 
 /* =====================================================
    Theme logo description
@@ -423,8 +429,8 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   width: 100%;
   text-align: center;
 }
-.member-name{ font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--navy); margin-bottom: 3px; }
-.member-role{ font-size: 0.8rem; color: var(--ink-muted); letter-spacing: 0.02em; }
+.member-name{ font-family: var(--font-display); font-weight: 600; font-size: 1.06rem; color: var(--navy); margin-bottom: 3px; }
+.member-role{ font-size: 0.86rem; color: var(--ink-muted); letter-spacing: 0.02em; }
 
 @media (max-width: 1000px){
   .card-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -448,7 +454,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   padding: 14px 34px;
   border-radius: var(--radius-sm);
   border: none;
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   letter-spacing: 0.02em;
   transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -462,7 +468,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   padding: 13px 32px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 .btn-outline:hover{ border-color: var(--navy); }
@@ -486,7 +492,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   background: var(--surface-alt);
   border-bottom: 1px solid var(--border);
 }
-.page-hero h1{ color: var(--navy); font-size: clamp(1.9rem, 3.6vw, 2.5rem); }
+.page-hero h1{ color: var(--navy); font-size: clamp(2rem, 3.7vw, 2.6rem); }
 .page-hero p{ max-width: 560px; margin: 0 auto; }
 
 /* =====================================================
@@ -507,7 +513,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .avenue-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.avenue-card h3{ color: var(--navy); font-size: 1.1rem; }
+.avenue-card h3{ color: var(--navy); font-size: 1.16rem; }
 
 .directory-card{
   background: var(--surface);
@@ -544,7 +550,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   position: absolute; bottom: 10px; right: 10px;
   background: var(--navy);
   color: var(--white);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   padding: 6px 14px;
   border-radius: 999px;
@@ -567,7 +573,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   color: var(--ink-muted);
   padding: 9px 20px;
   border-radius: 999px;
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.2s ease;
 }
@@ -619,11 +625,11 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   max-width: 760px;
   margin: 0 auto 50px;
   text-align: center;
-  font-size: 1.02rem;
+  font-size: 1.08rem;
 }
 .content-subtitle{
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.56rem;
   margin-bottom: 30px;
 }
 .activity-grid{
@@ -638,7 +644,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   background: var(--surface-alt);
   border-left: 3px solid var(--gold);
   border-radius: var(--radius-sm);
-  font-size: 0.96rem;
+  font-size: 1.02rem;
   color: var(--ink);
   font-weight: 500;
 }
@@ -715,7 +721,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 .form-label{
   display: block;
   margin-bottom: 7px;
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   font-weight: 500;
   color: var(--ink);
 }
@@ -725,7 +731,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   padding: 13px 15px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  font-size: 0.96rem;
+  font-size: 1.02rem;
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--white);
@@ -751,7 +757,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   height: 300px;
   display: flex; align-items: center; justify-content: center;
   color: var(--ink-muted);
-  font-size: 0.82rem; letter-spacing: 0.04em;
+  font-size: 0.88rem; letter-spacing: 0.04em;
   text-align: center; padding: 0px;
 }
 .logo-block img{ object-fit: cover; width: 100%; height: auto; }
@@ -764,10 +770,10 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 }
 .stats-wrap{ display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; text-align: center; margin-top: 30px; }
 .stat-box{ background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 22px 10px; box-shadow: var(--shadow-sm); }
-.stat-box .num{ font-family: var(--font-display); font-weight: 600; color: var(--navy); font-size: 1.6rem; display: block; }
-.stat-box .label{ font-size: 0.76rem; color: var(--ink-muted); letter-spacing: 0.03em; }
+.stat-box .num{ font-family: var(--font-display); font-weight: 600; color: var(--navy); font-size: 1.7rem; display: block; }
+.stat-box .label{ font-size: 0.82rem; color: var(--ink-muted); letter-spacing: 0.03em; }
 .sister-list{ list-style:none; padding:0; margin: 22px auto 0; max-width: 600px; text-align: left; }
-.sister-list li{ padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--ink); }
+.sister-list li{ padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--ink); font-size: 1.02rem; }
 .test-card{
   max-width: 760px; margin: 0 auto; text-align: center;
   background: var(--navy-dark);
@@ -777,8 +783,8 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 }
 .test-card h2{ color: var(--gold-light); }
 .test-card p{ color: var(--on-dark-muted); }
-.test-card ol{ text-align: left; padding-left: 22px; margin: 0; line-height: 1.9; color: var(--on-dark); }
-.directory-card .member-role{ font-family: var(--font-display); font-weight: 600; color: var(--navy); font-size: 0.94rem; }
+.test-card ol{ text-align: left; padding-left: 22px; margin: 0; line-height: 1.9; color: var(--on-dark); font-size: 1.02rem; }
+.directory-card .member-role{ font-family: var(--font-display); font-weight: 600; color: var(--navy); font-size: 1rem; }
 
 @media (max-width: 900px){
   .stats-wrap{ grid-template-columns: repeat(2,1fr); }
@@ -797,9 +803,9 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
-.contact-columns h3{ color: var(--white); font-size: 1.02rem; margin-bottom: 18px; font-weight: 600; }
+.contact-columns h3{ color: var(--white); font-size: 1.08rem; margin-bottom: 18px; font-weight: 600; }
 .contact-columns ul li{ margin-bottom: 10px; }
-.contact-columns ul li a{ color: var(--on-dark-muted); font-size: 0.9rem; }
+.contact-columns ul li a{ color: var(--on-dark-muted); font-size: 0.96rem; }
 .contact-columns ul li a:hover{ color: var(--gold-light); }
 .social-icons{ display: flex; gap: 14px; margin-top: 8px; }
 .social-icons a{
@@ -808,18 +814,18 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   color: var(--on-dark);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 600;
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 .social-icons a:hover{ background: rgba(255,255,255,0.06); border-color: var(--gold); }
-.address-block p{ font-size: 0.9rem; margin: 4px 0; }
+.address-block p{ font-size: 0.96rem; margin: 4px 0; }
 .footer-bottom{
   text-align: center;
   margin-top: 46px;
   padding-top: 20px;
   border-top: 1px solid var(--border-dark);
-  font-size: 0.78rem;
+  font-size: 0.83rem;
   color: var(--on-dark-muted);
 }
 
