@@ -341,13 +341,6 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   border-radius: var(--radius-lg);
   margin-bottom: 36px;
 }
-.grp-card{
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 30px;
-}
 .group-photo-wrap h3{ color: var(--navy); font-weight: 600; font-size: 1.1rem; }
 
 /* =====================================================
@@ -670,6 +663,14 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   box-shadow: var(--shadow-sm);
 }
 .project-card img{ width: 100%; height: 320px; object-fit: cover; }
+
+.grp-card{
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
 
 @media (max-width: 700px){
   .activity-grid, .project-grid{ grid-template-columns: 1fr; }
