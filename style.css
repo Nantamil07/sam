@@ -747,12 +747,14 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   background: var(--surface);
   box-shadow: var(--shadow-sm);
   border-radius: var(--radius-md);
-  height: 220px;
+  width: 300px;
+  height: 300px;
   display: flex; align-items: center; justify-content: center;
   color: var(--ink-muted);
   font-size: 0.82rem; letter-spacing: 0.04em;
-  text-align: center; padding: 16px;
+  text-align: center; padding: 0px;
 }
+.logo-block img{ object-fit: cover; width: 100%; height: auto; }
 .history-card{
   max-width: 820px; margin: 0 auto;
   background: var(--surface-alt);
