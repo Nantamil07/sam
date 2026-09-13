@@ -272,25 +272,25 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   margin: 0 auto;
 }
 .hero-logo-box{
-  width: 100%;
-  max-width: 170px;
+  width: 200%;
+  max-width: 200px;
   aspect-ratio: 1 / 1;
   margin: 0 auto;
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  border-radius: 50%;
   background: var(--white);
   box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 14px;
+  padding: 0px;
   color: var(--ink-muted);
   font-size: 0.76rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.hero-logo-box img{ border-radius: var(--radius-sm); width: 100%; height: 100%; object-fit: contain; }
+.hero-logo-box img{ border-radius: var(--radius-sm); width: 100%; height: 100%; object-fit: fill; }
 .hero-center h2{
   font-size: clamp(2.2rem, 5.5vw, 3.4rem);
   color: var(--navy);
@@ -524,17 +524,18 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
    Event pages — poster gallery
    ===================================================== */
 .poster-grid{
+  margin: 0px 140px 40px 140px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
+  gap: 20px;
 }
 .poster-card{
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  height: 600px;
-  position: relative;
+  height: 580px;
+  position: center;
 }
 .poster-card .placeholder-block{ height: 100%; border: none; border-radius: 0; }
 .poster-card img{ width: 100%; height: 100%; transition: transform 0.5s ease; }
