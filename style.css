@@ -339,7 +339,6 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 }
 .group-photo-frame{
   border-radius: var(--radius-lg);
-  height: 520px;
   margin-bottom: 36px;
 }
 .group-photo-wrap h3{ color: var(--navy); font-weight: 600; font-size: 1.1rem; }
