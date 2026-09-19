@@ -539,7 +539,6 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  height: 640px;
   position: center;
 }
 .poster-card .placeholder-block{ height: 100%; border: none; border-radius: 0; }
