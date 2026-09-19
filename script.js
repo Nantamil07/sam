@@ -155,45 +155,135 @@ function initImageFallbacks(){
   });
 }
 
-/* ---------- Navbar behavior ---------- */
+/* ---------- Navbar behavior (Desktop + Mobile Fixed) ---------- */
 function initNavbarBehavior(){
-  const navbar = document.getElementById('mainNavbar');
-  const hamburger = document.getElementById('hamburgerBtn');
-  const navLinks = document.getElementById('navLinks');
+
+  const navbar = document.getElementById("mainNavbar");
+  const hamburger = document.getElementById("hamburgerBtn");
+  const navLinks = document.getElementById("navLinks");
 
   if (!navbar) return;
 
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  /* Sticky navbar shadow */
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 20);
   });
 
+  /* Mobile hamburger */
   if (hamburger && navLinks){
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
+
+    hamburger.addEventListener("click", () => {
+
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("open");
+
+      // Close dropdowns whenever menu is closed
+      if (!navLinks.classList.contains("open")){
+        document.querySelectorAll(".nav-dropdown")
+          .forEach(drop => drop.classList.remove("open"));
+      }
+
     });
+
   }
 
-  // Dropdown: hover on desktop is handled by CSS; add click support for touch
-  document.querySelectorAll('[data-dropdown-toggle]').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
+  /* -------- Mobile Dropdown Fix -------- */
+
+  const dropdownToggles = document.querySelectorAll("[data-dropdown-toggle]");
+
+  dropdownToggles.forEach(toggle => {
+
+    toggle.addEventListener("click", function(e){
+
+      // Mobile only
       if (window.innerWidth <= 860){
+
         e.preventDefault();
-        toggle.closest('.nav-dropdown').classList.toggle('open');
+
+        const currentDropdown = this.closest(".nav-dropdown");
+
+        // Close every other dropdown
+        document.querySelectorAll(".nav-dropdown").forEach(drop => {
+          if (drop !== currentDropdown){
+            drop.classList.remove("open");
+          }
+        });
+
+        // Toggle current dropdown
+        currentDropdown.classList.toggle("open");
       }
+
     });
+
   });
 
-  // Smooth scroll for in-page anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const target = document.querySelector(a.getAttribute('href'));
+  /* Close mobile menu after clicking submenu item */
+  document.querySelectorAll(".nav-dropdown-menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      if (window.innerWidth <= 860){
+
+        navLinks.classList.remove("open");
+        hamburger.classList.remove("active");
+
+        document.querySelectorAll(".nav-dropdown")
+          .forEach(drop => drop.classList.remove("open"));
+      }
+
+    });
+
+  });
+
+  /* Close menu when normal link clicked (mobile) */
+  document.querySelectorAll(".nav-links > li > a:not([data-dropdown-toggle])")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        if (window.innerWidth <= 860){
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+        }
+
+      });
+
+    });
+
+  /* Smooth scrolling for same-page anchors */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+      const target = document.querySelector(this.getAttribute("href"));
+
       if (target){
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
       }
+
     });
+
   });
+
+  /* Remove mobile dropdown state when resized to desktop */
+  window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 860){
+
+      navLinks.classList.remove("open");
+      hamburger.classList.remove("active");
+
+      document.querySelectorAll(".nav-dropdown")
+        .forEach(drop => drop.classList.remove("open"));
+    }
+
+  });
+
 }
 
 /* ---------- Reveal on scroll ---------- */
