@@ -529,9 +529,9 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
    Event pages — poster gallery
    ===================================================== */
 .poster-grid{
-  margin: 0px 140px 40px 140px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  position: center;
   gap: 20px;
 }
 .poster-card{
@@ -539,7 +539,7 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  height: 580px;
+  height: 640px;
   position: center;
 }
 .poster-card .placeholder-block{ height: 100%; border: none; border-radius: 0; }
