@@ -894,3 +894,102 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
   .masonry{ column-count: 1; }
   section{ padding: 56px 0; }
 }
+
+@media screen and (max-width: 860px) {
+
+  /* Sidebar menu */
+  .nav-links{
+    position: fixed;
+    top: 72px;
+    right: 0;
+    width: 82%;
+    max-width: 340px;
+    height: calc(100vh - 72px);
+    background: #ffffff;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform .35s ease;
+    z-index: 9999;
+  }
+
+  .nav-links.open{
+    transform: translateX(0);
+  }
+
+  /* Each menu item full width */
+  .nav-links li{
+    width: 100%;
+    position: relative;
+  }
+
+  .nav-links li a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  /* -------- AVENUES / EVENTS DROPDOWN -------- */
+
+  .nav-dropdown{
+    width: 100%;
+  }
+
+  .nav-dropdown-menu{
+
+    /* Override desktop positioning */
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    display: none;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+
+    width: 100%;
+    margin-top: 10px;
+
+    background: #F4F7FF;
+    border: 1px solid #D8E2F3;
+    border-radius: 12px;
+    box-shadow: none;
+
+    padding: 8px;
+  }
+
+  .nav-dropdown.open .nav-dropdown-menu{
+    display: block;
+  }
+
+  .nav-dropdown-menu a{
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+
+    white-space: normal;
+    line-height: 1.4;
+
+    font-size: 15px;
+    color: #10275A;
+  }
+
+  .nav-dropdown-menu a:hover{
+    background: #E8F0FF;
+    color: #0A1E4F;
+  }
+
+  /* Remove desktop hover underline */
+  .nav-dropdown-menu a::after{
+    display: none !important;
+  }
+
+}
