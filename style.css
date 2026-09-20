@@ -260,6 +260,14 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 .hamburger.active span:nth-child(2){ opacity: 0; }
 .hamburger.active span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
 
+.gal-card{
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 5px;
+}
+
 /* =====================================================
    Hero — three column logo layout
    ===================================================== */
