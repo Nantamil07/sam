@@ -85,9 +85,7 @@ function buildFooter(){
       <h3 style="margin-top:28px;">Follow Us</h3>
       <div class="social-icons">
         <a href="https://www.instagram.com/rotaractdistrict3206/" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="Facebook" data-placeholder-link>FB</a>
         <a href="https://www.linkedin.com/company/rotaract-club-of-coimbatore-institute-of-technology/" aria-label="LinkedIn">IN</a>
-        <a href="#" aria-label="YouTube" data-placeholder-link>YT</a>
       </div>
     </div>
     <div class="address-block">
