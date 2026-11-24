@@ -364,6 +364,13 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
 .two-col-text h2{ color: var(--navy); }
 .two-col-text h4{ color: var(--gold); font-size: 1rem; margin-top: 22px; }
 
+.two-col-text p{
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
 /* =====================================================
    Prayer card
    ===================================================== */
