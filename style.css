@@ -538,9 +538,10 @@ section{ position: relative; padding: 84px 0; z-index: 2; }
    ===================================================== */
 .poster-grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: center;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .poster-card{
   overflow: hidden;
